@@ -1,0 +1,127 @@
+#  ** README **
+
+```markdown
+# Quantum-Enhanced Explainable AI (Q-SHAP⁺)  
+### Reproducible Thesis Research Artifact
+
+This repository contains the full code & results reproduction pipeline for the Master’s thesis:
+
+> **Quantum-Enhanced Explainable AI (Q-SHAP⁺) for Credit Risk Assessment**  
+> Author: Pranav Sanghadia  
+> Institution: *Capitol Technology University*  
+> Year: 2025  
+
+The framework compares three model-agnostic explainability methods:
+
+| Method | Model Type | Explanation Type | Causal? |
+|--------|------------|-----------------|--------|
+| **SHAP** | XGBoost | Correlational | ❌ |
+| **SHAP⁺** | XGBoost | Interventional | ✅ |
+| **Q-SHAP⁺** | Quantum Circuit | Interventional | ✅ |
+
+Q-SHAP⁺ leverages quantum conditional rotations to capture feature interactions via entanglement and interference effects.
+
+---
+
+## What This Repository Includes
+
+✔ Fully reproducible code  
+✔ Inline preprocessing (no external helper modules)  
+✔ Deterministic random seeds  
+✔ Quantum model caching (`--quick` flag)  
+✔ Automated generation of thesis figures + result tables  
+✔ Professional, reusable framework for future research
+
+📂 Key Directories
+
+```
+
+.
+├─ src/
+│  └─ qshap_plus_framework_thesis_final_v1.0.2.py  # main execution script
+├─ data/
+│  └─ default_of_credit_card_clients.xlsx          # dataset (expected)
+├─ results/                                        # generated CSV + PNG outputs
+├─ models/                                         # cached trained models
+└─ README.md                                       # this file
+
+````
+
+---
+
+## How to Run
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+````
+
+### Run Full Analysis
+
+```bash
+cd src
+python qshap_plus_framework_thesis_final_v1.0.2.py
+```
+
+### Faster (Skip retraining Quantum Model)
+
+```bash
+python qshap_plus_framework_thesis_final_v1.0.2.py --quick
+```
+
+Outputs are written to `/results/`.
+
+---
+
+## Generated Outputs
+
+**CSV Files**
+
+* `digitized_features_54_profiles.csv`
+* `three_method_comparison.csv`
+
+**PNG Visualizations**
+
+* Validation AUC & Accuracy bar chart
+* Attribution heatmaps (SHAP, SHAP⁺, Q-SHAP⁺)
+* Mean importance bar charts (all 3 methods)
+* SHAP beeswarm & top-feature plots
+
+*(Same as thesis figures — no extra artifacts)*
+
+---
+
+## Thesis Citation
+
+If referencing this project:
+
+```bibtex
+@thesis{sanghadia2025qshap,
+  author = {Sanghadia, Pranav},
+  title = {Quantum-Enhanced Explainable AI (Q-SHAP+) for Credit Risk Assessment},
+  school = {Capitol Technology University},
+  year = {2025}
+}
+```
+
+---
+
+## Future Enhancements
+
+✅ Add Colab execution badge
+✅ CI automation to validate execution
+✔ Package as a Python library (`pip install qshap-plus`)
+✔ Support additional datasets & intervention types
+
+PRs and feedback welcome!
+
+---
+
+### Contact
+
+**Author:** Pranav Sanghadia
+📧 [psanghadia@captechu.edu](mailto:psanghadia@captechu.edu)
+
+---
+
